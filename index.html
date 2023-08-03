@@ -1,9 +1,131 @@
-<!DOCTYPE html>
-<html>
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Suyash Vardhan Singh | PhD Student at University of South Carolina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #007bff;
+        }
+        
+        h2 {
+            color: #004085;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+    <img src="./IMG-0702.JPG" style="float:right;width: 500px;;height: 500px;" >
+</head>
+
 <body>
-<h1>Suyash Vardhan Singh</h1>
-<p>Hello, I am a PhD student at University of South Carolina.
-<img src="./IMG-0702.JPG" style="float:right;width: 500px;;height: 500px;" >
-</p>
+    <h1>Suyash Vardhan Singh</h1>
+    <p>Columbia, SC - 29205 | ss121@email.sc.edu | <a href="https://www.linkedin.com/in/svsingh11/">LinkedIn</a> | +1-714-213-0102</p>
+
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>Concepts: Digital Design, SoC Design, STA, Lint, FPGA, HLS.</li>
+        <li>Programming Skills: Verilog, System Verilog, C, MATLAB, HSpice.</li>
+        <li>Computer Architecture: MIPS Architecture, Cache Organization, RISC-V.</li>
+        <li>Tools: Synopsys VCS, Mentor Graphics Model Sim, AMD Xilinx Vivado, AMD Xilinx Vitis, AMD Xilinx Vitis HLS, Synopsys Design Compiler, Synopsys Formality, Mentor Graphics Questa Sim, LTSpice, Synopsys HSpice.</li>
+    </ul>
+
+    <h2>Work Experience</h2>
+    <ul>
+        <li>
+            <strong>Research Assistant (Heterogenous Reconfigurable Computing lab at University of South Carolina), Columbia, SC</strong>
+            <br>Jan 2022 - Present
+            <ul>
+                <li>Designed a network chipscope on Xilinx ZCU104 board which can handle 10-12 FPGAs over the ethernet.</li>
+                <li>Designing a domain-specific real-time machine learning processor that can be used with the ARM SOC.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Design Engineer Intern (Pacific Microchip Corp), Culver City, CA</strong>
+            <br>Mar 2020 - April 2020
+            <ul>
+                <li>Worked with Simulink models involving fixed-point processing, including FFT.</li>
+                <li>Generated custom RTL from such Simulink models and created state machines to control the data flow.</li>
+                <li>Implemented a part of the RTL in FPGA for verifying functionality.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>RTL Design Intern (HDLexpress), Canby, Oregon</strong>
+            <br>Jul 2019 - Jan 2020
+            <ul>
+                <li>Worked on the designing and debugging of a new out-of-order CPU.</li>
+                <li>Created RTL for a read-only Instruction Cache controller in System Verilog using Modelsim - Intel FPGA edition tool.</li>
+                <li>Debugged the cache code and submitted weekly reports to the supervisor.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Research Assistant (California State University Fullerton), Fullerton</strong>
+            <br>Mar 2018 - May 2019
+            <ul>
+                <li>Assisted the Low power IC design academic research and the preparation and editing of manuscripts.</li>
+                <li>Performed simulations using Synopsys HSpice and Xilinx Vivado tools.</li>
+                <li>Attended and presented the paper in ITNG conference 2019.</li>
+            </ul>
+            <em>Published Paper:</em> S. Singh, and R. Mahto, "Switchable Single/Dual Edge Registers for Pipeline Architecture", Proceedings of ITNG 2019.
+        </li>
+    </ul>
+
+    <h2>Training</h2>
+    <ul>
+        <li><strong>ASIC Flow from Spec to Nano, (UCSC Extension)</strong>
+            <br>Oct 2019 - Dec 2019
+            <ul>
+                <li>Hands-on digital and on-chip analog design.</li>
+                <li>Functional verification (including constrained random verification and functional coverage, using System Verilog OOP syntax).</li>
+                <li>Supplements to simulation: Formal checking and hardware emulation.</li>
+                <li>Physical implementation: floorplan, power-grid synthesis, placement, clock-tree synthesis, routing, and streaming out a GDSII description.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Education</h2>
+    <ul>
+        <li><strong>Doctor of Philosophy (PhD) in Computer Engineering, University of South Carolina (GPA 3.5/4.0)</strong>
+            <br>January 2022 - Present</li>
+        <li><strong>Master of Science in Computer Engineering, California State University, Fullerton, California (GPA 3.15/4.0)</strong>
+            <br>May 2019</li>
+        <li><strong>Bachelor of Technology in Electronics and Communications, IET, Lucknow, India</strong>
+            <br>June 2017</li>
+        <em>Relevant Coursework:</em> VLSI Testing and DFT, Digital Logic Design and Architecture, Mixed Signal IC Design, Advanced Computer Architecture, Low power IC Design, Neuromorphic Computing, Compiler Construction.
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Design of a network chipscope | (Xilinx Vivado, Xilinx Vitis, Verilator)</strong>
+            <br>A network chipscope similar to Xilinx chipscope made for the network.
+            <br>Customize a full AXI IP and wrote a Verilog and C code that can communicate with the ARM SOC and Ethernet.</li>
+        <li><strong>Designing a real-time machine learning processor (Xilinx Vivado, Xilinx Vivado HLS)</strong>
+            <br>Designed the ML processor using High-Level Synthesis.
+            <br>The processor uses AXI stream protocol that is used for integrating with ARM SOC.</li>
+        <li><strong>Formal Equivalence Checking of a network of 3 D-flipflops | (Synopsys DV, Synopsys Formality)</strong>
+            <br>The network is tested after synthesizing the RTL code into a gate-level netlist.
+            <br>After inserting a scan chain into the gate-level netlist, the test is done using the formality tool.</li>
+        <li><strong>Design of a low-power SRAM Cell | (Synopsys HSpice, LTSpice)</strong>
+            <br>Implemented 6 Transistor SRAM cell in HSpice using PTM ASU’s 32nm technology node.
+            <br>Reduced power by 56% using the body biasing technique.</li>
+    </ul>
 </body>
+
 </html>
+
