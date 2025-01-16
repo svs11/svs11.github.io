@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suyash Vardhan Singh</title>
     <style>
         body {
@@ -10,14 +11,30 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            line-height: 1.6;
+            color: #333;
         }
 
-        h1 {
+        h1, h2 {
             color: #007bff;
         }
 
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        img.profile-img {
+            float: right;
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
         ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
         }
 
@@ -25,61 +42,110 @@
             margin-bottom: 10px;
         }
 
-        .profile-img {
-            float: right;
-            width: 200px;
-            height: 200px;
-            margin: 20px;
-            border-radius: 50%;
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            img.profile-img {
+                float: none;
+                display: block;
+                margin: 0 auto 20px;
+            }
+
+            body {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <img class="profile-img" src="IMG-0702.JPG" alt="Suyash Vardhan Singh">
+    <header>
+        <img class="profile-img" src="IMG-0702.JPG" alt="Portrait of Suyash Vardhan Singh">
+        <h1>Suyash Vardhan Singh</h1>
+        <p>
+            Columbia, SC - 29210 | 
+            <a href="mailto:ss121@email.sc.edu">ss121@email.sc.edu</a> | 
+            <a href="https://www.linkedin.com/in/svsingh11/" target="_blank">LinkedIn</a> | 
+            +1-714-213-0102
+        </p>
+    </header>
 
-    <h1>Suyash Vardhan Singh</h1>
-    <p>Columbia, SC - 29210 | ss121@email.sc.edu | <a href="https://www.linkedin.com/in/svsingh11/">LinkedIn</a> | +1-714-213-0102</p>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                Hi, I am a PhD student at the University of South Carolina. I am passionate about heterogeneous computing and AI hardware accelerators. 
+                I currently work in the <a href="https://www.cse.sc.edu/~jbakos/group/" target="_blank">Heterogeneous Reconfigurable Computing Lab</a>.
+            </p>
+        </section>
 
-    <h2>Introduction</h2>
-    <p>Hi, I am a PhD Student at University of South Carolina . I am interested in Hetereogenous computing and AI hardware accelerators.I am currently working in the <a href="https://www.cse.sc.edu/~jbakos/group/">Heteregenoeus Reconfigurable Computing lab</a></p>
+        <section>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Concepts:</strong> Digital Design, SoC Design, STA, Lint, FPGA, HLS.</li>
+                <li><strong>Programming Skills:</strong> Verilog, System Verilog, C, MATLAB, HSpice.</li>
+                <li><strong>Computer Architecture:</strong> MIPS Architecture, Cache Organization, RISC-V.</li>
+                <li><strong>Tools:</strong> Synopsys VCS, ModelSim, Vivado, Vitis, Design Compiler, Questa Sim, LTSpice.</li>
+            </ul>
+        </section>
 
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>Concepts: Digital Design, SoC Design, STA, Lint, FPGA, HLS.</li>
-        <li>Programming Skills: Verilog, System Verilog, C, MATLAB, HSpice.</li>
-        <li>Computer Architecture: MIPS Architecture, Cache Organization, RISC-V.</li>
-        <li>Tools: Synopsys VCS, Mentor Graphics Model Sim, AMD Xilinx Vivado, AMD Xilinx Vitis, AMD Xilinx Vitis HLS, Synopsys Design Compiler, Synopsys Formality, Mentor Graphics Questa Sim, LTSpice, Synopsys HSpice.</li>
-    </ul>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PhD in Computer Engineering, University of South Carolina</strong> <br> January 2022 - Present</li>
+                <li><strong>MS in Computer Engineering, California State University, Fullerton</strong> <br> May 2019</li>
+                <li><strong>B.Tech in Electronics and Communications, IET Lucknow, India</strong> <br> June 2017</li>
+            </ul>
+        </section>
 
-    <h2>Education</h2>
-    <ul>
-        <li><strong>Doctor of Philosophy (PhD) in Computer Engineering, University of South Carolina</strong>
-            <br>January 2022 - Present</li>
-        <li><strong>Master of Science in Computer Engineering, California State University, Fullerton, California</strong>
-            <br>May 2019</li>
-        <li><strong>Bachelor of Technology in Electronics and Communications, IET, Lucknow, India</strong>
-            <br>June 2017</li>
-    </ul>
-    <h2>  Research/Teaching Experience </h2>
-     <ul>
-    <li><strong>Research Assistant/Teaching Assistant (Heterogenous Reconfigurable Computing lab at University of South Carolina), Columbia, SC</strong>
-        <br>January 2022 - Present</li>
-        <li>Developed an ILP-based optimizer for efficient resource scheduling in deploying machine learning models onto
-FPGA <a href="https://github.com/HeRCLab/hls4ml_explorer"> github:HLS4ml_explorer</a></li>
-        <li>Designing a domain specific real time machine learning processor that can be used with the ARM SOC.</li>
-        <li>Teaching Assistant to the CSCE 611 (Advance Digital Design Course), assisted the labs where students designed a 3 stage pipelined RISC V processor and wrote a assembly language program to test it.</li>
-        
+        <section>
+            <h2>Research/Teaching Experience</h2>
+            <article>
+                <ul>
+                    <li><strong>Research Assistant/Teaching Assistant</strong> (Heterogeneous Reconfigurable Computing Lab) <br> January 2022 - Present</li>
+                    <li>
+                        Developed an ILP-based optimizer for efficient resource scheduling for deploying ML models onto FPGA. 
+                        <a href="https://github.com/HeRCLab/hls4ml_explorer" target="_blank">GitHub: HLS4ml_explorer</a>
+                    </li>
+                    <li>Designed a domain-specific real-time machine learning processor integrated with ARM SoC.</li>
+                    <li>
+                        Teaching Assistant for CSCE 611 (Advanced Digital Design): Assisted students in designing a 3-stage pipelined RISC-V processor and testing it with assembly programs.
+                    </li>
+                </ul>
+            </article>
+        </section>
 
-    <h2>Current Project</h2>
-   <p> I am working on <a href="https://herclab.github.io/shf1956071">Collaborative Research:SHF:Medium:Machine Learning on the Edge for Real-Time Microsecond State Estimation of High-Rate Dynamic Events.</a></p>
+        <section>
+            <h2>Current Project</h2>
+            <p>
+                I am working on 
+                <a href="https://herclab.github.io/shf1956071" target="_blank">
+                    Collaborative Research: SHF: Medium: Machine Learning on the Edge for Real-Time Microsecond State Estimation of High-Rate Dynamic Events.
+                </a>
+            </p>
+        </section>
 
-    <h2>Publications</h2>
-    <ul>
-        <li>S. Singh and R. Mahto, "Switchable Single/Dual Edge Registers for Pipeline Architecture," in Proceedings of the 16th International Conference on Information Technology: New Generations (ITNG), Las Vegas, NV, USA, Apr. 2019, pp.535-541. DOI: 10.1109/ITNG.2019.00090</li>
-        <li>Suyash V. Singh, I. Ahmad, D. Andrews, M. Huang, A. Downey, and J. Bakos, "Resource Scheduling for Real-Time Machine Learning," in Proceedings of the 2025 ACM/SIGDA International Symposium on Field Programmable Gate 
-            Arrays (FPGA ’25), Monterey, CA, USA, Feb. 2025. DOI: 10.1145/3706628.3708848, 979-8-4007-1396-5/25/02.</li>li
-    </ul>
+        <section>
+            <h2>Publications</h2>
+            <ul>
+                <li>
+                    S. Singh and R. Mahto, "Switchable Single/Dual Edge Registers for Pipeline Architecture," 
+                    <em>16th International Conference on Information Technology: New Generations (ITNG)</em>, Apr. 2019, DOI: 10.1109/ITNG.2019.00090
+                </li>
+                <li>
+                    S. V. Singh et al., "Resource Scheduling for Real-Time Machine Learning," 
+                    <em>ACM/SIGDA International Symposium on FPGA</em>, Feb. 2025, DOI: 10.1145/3706628.3708848
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
 
 </html>
