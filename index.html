@@ -8,11 +8,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 1200px; /* Increased maximum width */
+            margin: 20px auto; /* Added margin for spacing around the page */
+            padding: 30px;
             line-height: 1.6;
             color: #333;
+            background-color: #f8f9fa;
         }
 
         h1, h2 {
@@ -26,8 +27,8 @@
 
         img.profile-img {
             float: right;
-            width: 150px;
-            height: 150px;
+            width: 180px; /* Slightly smaller image for balance */
+            height: 180px;
             margin: 20px;
             border-radius: 50%;
             object-fit: cover;
@@ -39,7 +40,7 @@
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         a {
@@ -51,15 +52,16 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
+            body {
+                max-width: 100%; /* Full width for smaller screens */
+                padding: 20px;
+            }
+
             img.profile-img {
                 float: none;
                 display: block;
                 margin: 0 auto 20px;
-            }
-
-            body {
-                padding: 10px;
             }
         }
     </style>
@@ -136,14 +138,13 @@
             <h2>Publications</h2>
             <ul>
                 <li>
-                    Suyash V. Singh, I. Ahmad, D. Andrews, M. Huang, A. Downey, and J. Bakos, "Resource Scheduling for Real-Time Machine Learning," 
-                    <em>ACM/SIGDA International Symposium on FPGA</em>, Feb. 2025, DOI: 10.1145/3706628.3708848
-                </li>
-                <li>
                     S. Singh and R. Mahto, "Switchable Single/Dual Edge Registers for Pipeline Architecture," 
                     <em>16th International Conference on Information Technology: New Generations (ITNG)</em>, Apr. 2019, DOI: 10.1109/ITNG.2019.00090
                 </li>
-                
+                <li>
+                    S. V. Singh et al., "Resource Scheduling for Real-Time Machine Learning," 
+                    <em>ACM/SIGDA International Symposium on FPGA</em>, Feb. 2025, DOI: 10.1145/3706628.3708848
+                </li>
             </ul>
         </section>
     </main>
