@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 1200px; /* Increased maximum width */
-            margin: 20px auto; /* Added margin for spacing around the page */
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 30px;
             line-height: 1.6;
             color: #333;
@@ -25,13 +25,80 @@
             margin-top: 0;
         }
 
-        img.profile-img {
-            float: right;
-            width: 180px; /* Slightly smaller image for balance */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-img {
+            width: 180px;
             height: 180px;
-            margin: 20px;
             border-radius: 50%;
             object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #007bff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
         }
 
         ul {
@@ -40,7 +107,7 @@
         }
 
         li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         a {
@@ -54,14 +121,8 @@
 
         @media (max-width: 800px) {
             body {
-                max-width: 100%; /* Full width for smaller screens */
+                max-width: 100%;
                 padding: 20px;
-            }
-
-            img.profile-img {
-                float: none;
-                display: block;
-                margin: 0 auto 20px;
             }
         }
     </style>
@@ -79,8 +140,22 @@
         </p>
     </header>
 
+    <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#skills">Technical Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <div class="dropdown">
+            <a href="#">Research ▼</a>
+            <div class="dropdown-content">
+                <a href="posters/FPGA_poster_feb.pdf" target="_blank">FPGA '25 Poster</a>
+            </div>
+        </div>
+    </nav>
+
     <main>
-        <section>
+        <section id="intro">
             <h2>Introduction</h2>
             <p>
                 Hi, I am a PhD student at the University of South Carolina. I am passionate about heterogeneous computing and AI hardware accelerators. 
@@ -88,17 +163,17 @@
             </p>
         </section>
 
-        <section>
+        <section id="skills">
             <h2>Technical Skills</h2>
             <ul>
-                <li><strong>Concepts:</strong> Digital Design, SoC Design, STA, Lint, FPGA, HLS.</li>
+                <li><strong>Concepts:</strong> Digital Design, SoC Design, STA, FPGA, HLS.</li>
                 <li><strong>Programming Skills:</strong> Verilog, System Verilog, C, MATLAB, HSpice.</li>
-                <li><strong>Computer Architecture:</strong> MIPS Architecture, Cache Organization, RISC-V.</li>
-                <li><strong>Tools:</strong> Synopsys VCS, ModelSim, Vivado, Vitis, Design Compiler, Questa Sim, LTSpice.</li>
+                <li><strong>Computer Architecture:</strong> RISC-V, MIPS Architecture, Cache Organization.</li>
+                <li><strong>Tools:</strong> Synopsys VCS, ModelSim, Vivado, Questa Sim, LTSpice.</li>
             </ul>
         </section>
 
-        <section>
+        <section id="education">
             <h2>Education</h2>
             <ul>
                 <li><strong>PhD in Computer Engineering, University of South Carolina</strong> <br> January 2022 - Present</li>
@@ -107,48 +182,34 @@
             </ul>
         </section>
 
-        <section>
+        <section id="experience">
             <h2>Research/Teaching Experience</h2>
-            <article>
-                <ul>
-                    <li><strong>Research Assistant/Teaching Assistant</strong> (Heterogeneous Reconfigurable Computing Lab) <br> January 2022 - Present</li>
-                    <li>
-                        Developed an ILP-based optimizer for efficient resource scheduling for deploying ML models onto FPGA. 
-                        <a href="https://github.com/HeRCLab/hls4ml_explorer" target="_blank">GitHub: HLS4ml_explorer</a>
-                    </li>
-                    <li>Designed a domain-specific real-time machine learning processor integrated with ARM SoC.</li>
-                    <li>
-                        Teaching Assistant for CSCE 611 (Advanced Digital Design): Assisted students in designing a 3-stage pipelined RISC-V processor and testing it with assembly programs.
-                    </li>
-                </ul>
-            </article>
-        </section>
-
-        <section>
-            <h2>Current Project</h2>
-            <p>
-                I am working on 
-                <a href="https://herclab.github.io/shf1956071" target="_blank">
-                    Collaborative Research: SHF: Medium: Machine Learning on the Edge for Real-Time Microsecond State Estimation of High-Rate Dynamic Events.
-                </a>
-            </p>
-        </section>
-
-        <section>
-            <h2>Publications</h2>
             <ul>
+                <li><strong>Research Assistant</strong> (Heterogeneous Reconfigurable Computing Lab) <br> Jan 2022 - Present</li>
                 <li>
-                    Suyash V. Singh, I. Ahmad, D. Andrews, M. Huang, A. Downey, and J. Bakos, "Resource Scheduling for Real-Time Machine Learning," 
-                    <em>ACM/SIGDA International Symposium on FPGA</em>, Feb. 2025, DOI: 10.1145/3706628.3708848
+                    Developed an ILP-based optimizer for ML models on FPGA. 
+                    <a href="https://github.com/HeRCLab/hls4ml_explorer" target="_blank">GitHub: HLS4ml_explorer</a>
                 </li>
-                <li>
-                    S. Singh and R. Mahto, "Switchable Single/Dual Edge Registers for Pipeline Architecture," 
-                    <em>16th International Conference on Information Technology: New Generations (ITNG)</em>, Apr. 2019, DOI: 10.1109/ITNG.2019.00090
-                </li>
-                
             </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="card">
+                <strong>Resource Scheduling for Real-Time Machine Learning</strong><br>
+                <em>ACM/SIGDA International Symposium on FPGA, 2025</em><br>
+                <a href="https://doi.org/10.1145/3706628.3708848" target="_blank">DOI: 10.1145/3706628.3708848</a>
+            </div>
+            <div class="card">
+                <strong>N-TORC: Native Tensor Optimizer for Real-time Constraints</strong><br>
+                <em>IEEE 33rd FCCM, May 2025</em>
+            </div>
+            <div class="card">
+                <strong>Switchable Single/Dual Edge Registers for Pipeline Architecture</strong><br>
+                <em>ITNG, Apr. 2019</em><br>
+                <a href="https://doi.org/10.1109/ITNG.2019.00090" target="_blank">DOI: 10.1109/ITNG.2019.00090</a>
+            </div>
         </section>
     </main>
 </body>
-
 </html>
