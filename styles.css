@@ -1,5 +1,6 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     max-width: 1200px;
     margin: 20px auto;
     padding: 30px;
@@ -8,10 +9,22 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Headings */
 h1, h2 {
     color: #007bff;
+    font-weight: bold;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Header */
 header {
     text-align: center;
     padding: 20px;
@@ -21,28 +34,78 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation Bar */
 nav {
     background: #007bff;
     padding: 10px;
     text-align: center;
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 18px;
     display: inline-block;
     font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 nav a:hover {
     background: #0056b3;
     border-radius: 5px;
+    transform: scale(1.05);
 }
 
+/* Dropdown */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    text-align: left;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    transition: background 0.2s ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sections */
 section {
     background: white;
     padding: 20px;
@@ -51,15 +114,68 @@ section {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Lists */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Cards for Publications */
 .card {
     background: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    body {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 0.9em;
+        word-wrap: break-word;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
 }
