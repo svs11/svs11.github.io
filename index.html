@@ -1,198 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suyash Vardhan Singh</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 30px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-
-        h1, h2 {
-            color: #007bff;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 0;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            background: #007bff;
-            padding: 10px;
-            text-align: center;
-            border-radius: 8px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            background: #0056b3;
-            border-radius: 5px;
-        }
-
-        .dropdown {
-            display: inline-block;
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 180px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 5px;
-            text-align: left;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        section {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 800px) {
-            body {
-                max-width: 100%;
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suyash Vardhan Singh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <img class="profile-img" src="IMG-0702.JPG" alt="Portrait of Suyash Vardhan Singh">
-        <h1>Suyash Vardhan Singh</h1>
-        <p>
-            Columbia, SC - 29210 | 
-            <a href="mailto:ss121@email.sc.edu">ss121@email.sc.edu</a> | 
-            <a href="https://www.linkedin.com/in/svsingh11/" target="_blank">LinkedIn</a> | 
-            +1-714-213-0102
-        </p>
-    </header>
 
-    <nav>
-        <a href="#intro">Introduction</a>
-        <a href="#skills">Technical Skills</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <div class="dropdown">
-            <a href="#">Posters ▼</a>
-            <div class="dropdown-content">
-                <a href="posters/FPGA_poster_feb.pdf" target="_blank">FPGA '25 Poster</a>
-            </div>
-        </div>
-    </nav>
+  <header>
+    <img class="profile-img" src="IMG-0702.JPG" alt="Portrait of Suyash Vardhan Singh">
+    <h1>Suyash Vardhan Singh</h1>
+    <p>
+      Columbia, SC 29210 | 
+      <a href="mailto:ss121@email.sc.edu">ss121@email.sc.edu</a> | 
+      <a href="https://www.linkedin.com/in/svsingh11/" target="_blank">LinkedIn</a> | 
+      <a href="tel:+17142130102">+1-714-213-0102</a>
+    </p>
+  </header>
 
-    <main>
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Research Assistant/Teaching Assistant, University of South Carolina</strong> (Jan 2022 - Present)</li>
-                <li>Developed an ILP-based optimizer for efficient resource scheduling in deploying ML models onto FPGA. <a href="https://github.com/HeRCLab/hls4ml_explorer" target="_blank">GitHub: HLS4ML_explorer</a></li>
-                <li>Developed an LSTM accelerator in HLS on Xilinx ZCU104 for real-time machine learning applications.</li>
-                <li>Assisted in CSCE 611 (Advanced Digital Design Course) labs where students designed a **3-stage pipelined RISC-V processor** and wrote **assembly language programs** to test it.</li>
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#skills">Technical Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+    <div class="dropdown">
+      <a href="javascript:void(0)">Posters ▼</a>
+      <div class="dropdown-content">
+        <a href="posters/FPGA_poster_feb.pdf" target="_blank">FPGA '25 Poster</a>
+      </div>
+    </div>
+  </nav>
 
-                <li><strong>Design Engineer Intern, Pacific Microchip Corp</strong> (Mar 2020 – Apr 2020)</li>
-                <li>Worked with **Simulink models** involving **fixed-point processing** including FFT.</li>
-                <li>Generated **custom RTL** from Simulink models and created **custom scripts** to generate RTL.</li>
-                <li>Implemented parts of RTL in FPGA to **verify functionality**.</li>
+  <main>
 
-                <li><strong>RTL Design Intern, HDLexpress</strong> (Jul 2019 – Jan 2020)</li>
-                <li>Designed RTL for a **read-only Instruction Cache Controller** in **System Verilog**.</li>
-                <li>Debugged cache code and submitted **weekly reports** to the supervisor.</li>
-            </ul>
-        </section>
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>
+        I am a Ph.D. student in Computer Engineering at the University of South Carolina. My research focuses on FPGA-based machine learning acceleration and digital system design. 
+        I hold a Master's in Computer Engineering from California State University, Fullerton, and a Bachelor's in Electronics and Communications from IET Lucknow. 
+        My work includes hardware accelerators, resource optimization, and real-time computing.
+      </p>
+    </section>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <div class="card">
-                <strong>Resource Scheduling for Real-Time Machine Learning</strong><br>
-                <em>Authors: Suyash V. Singh, Iftakhar Ahmad, David Andrews, Miaoqing Huang, Austin Downey, Jason D. Bakos</em><br>
-                <em>ACM/SIGDA International Symposium on FPGA, 2025</em>
-            </div>
-            <div class="card">
-                <strong>N-TORC: Native Tensor Optimizer for Real-time Constraints</strong><br>
-                <em>Authors: Suyash V. Singh, Iftakhar Ahmad, David Andrews, Miaoqing Huang, Austin Downey, Jason D. Bakos</em><br>
-                <em>IEEE 33rd FCCM, May 2025</em>
-            </div>
-            <div class="card">
-                <strong>Switchable Single/Dual Edge Registers for Pipeline Architecture</strong><br>
-                <em>Authors: S. Singh, R. Mahto</em><br>
-                <em>ITNG, Apr. 2019</em><br>
-                <a href="https://doi.org/10.1109/ITNG.2019.00090" target="_blank">DOI: 10.1109/ITNG.2019.00090</a>
-            </div>
-        </section>
-    </main>
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Verilog, SystemVerilog, C, Python, MATLAB, HSpice</li>
+        <li><strong>Concepts:</strong> Digital Design, SoC Design, FPGA, HLS, Computer Architecture, Static Timing Analysis</li>
+        <li><strong>Tools:</strong> Synopsys VCS, Mentor Graphics ModelSim, Xilinx Vivado, Vitis, Synopsys Design Compiler, QuestaSim, LTSpice</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Ph.D. in Computer Engineering</strong>, University of South Carolina, Columbia, SC (Jan 2022 – Present)</li>
+        <li><strong>M.S. in Computer Engineering</strong>, California State University, Fullerton, CA (May 2019)</li>
+        <li><strong>B.Tech. in Electronics and Communications</strong>, IET Lucknow, India (June 2017)</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Research Assistant/Teaching Assistant, University of South Carolina</strong> (Jan 2022 – Present)</li>
+        <li>Developed an ILP-based optimizer for efficient resource scheduling in deploying machine learning models onto FPGA. 
+            <a href="https://github.com/HeRCLab/hls4ml_explorer" target="_blank">GitHub: HLS4ML_explorer</a></li>
+        <li>Designed and implemented an LSTM accelerator in HLS on Xilinx ZCU104 for real-time machine learning applications.</li>
+        <li>Assisted in CSCE 611 (Advanced Digital Design) labs, guiding students in designing a 3-stage pipelined RISC-V processor and writing assembly programs.</li>
+
+        <li><strong>Design Engineer Intern, Pacific Microchip Corp</strong> (Mar 2020 – Apr 2020)</li>
+        <li>Worked with Simulink models for fixed-point processing, including FFT.</li>
+        <li>Developed custom RTL from Simulink models and created scripts to automate RTL generation.</li>
+        <li>Implemented and tested RTL components on FPGA for verification.</li>
+
+        <li><strong>RTL Design Intern, HDLexpress</strong> (Jul 2019 – Jan 2020)</li>
+        <li>Designed RTL for a read-only instruction cache controller in SystemVerilog.</li>
+        <li>Debugged and optimized cache controller design; provided weekly reports to the supervisor.</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="card">
+        <strong>Resource Scheduling for Real-Time Machine Learning</strong><br/>
+        <em>Suyash V. Singh, Iftakhar Ahmad, David Andrews, Miaoqing Huang, Austin Downey, Jason D. Bakos</em><br/>
+        <em>ACM/SIGDA International Symposium on FPGA (FPGA 2025)</em>
+      </div>
+      <div class="card">
+        <strong>N-TORC: Native Tensor Optimizer for Real-time Constraints</strong><br/>
+        <em>Suyash V. Singh, Iftakhar Ahmad, David Andrews, Miaoqing Huang, Austin Downey, Jason D. Bakos</em><br/>
+        <em>IEEE 33rd FCCM, May 2025</em>
+      </div>
+      <div class="card">
+        <strong>Switchable Single/Dual Edge Registers for Pipeline Architecture</strong><br/>
+        <em>S. Singh, R. Mahto</em><br/>
+        <em>ITNG, Apr. 2019</em><br/>
+        <a href="https://doi.org/10.1109/ITNG.2019.00090" target="_blank">DOI: 10.1109/ITNG.2019.00090</a>
+      </div>
+    </section>
+
+  </main>
+
 </body>
 </html>
