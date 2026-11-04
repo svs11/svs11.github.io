@@ -148,10 +148,30 @@ nav a.active { color: var(--accent); }
 .profile { order: 2; }
 
 /* ============ Profile sidebar ============ */
-.profile-inner {
-    position: sticky;
-    top: 92px;
+.profile-inner { position: static; }
+
+/* News in the sidebar */
+.side-news { margin: 26px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); }
+.side-news .side-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
 }
+.side-news .side-title::before, .side-news .side-title::after { content: none; }
+.side-news .news li {
+    display: block;
+    padding: 9px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.side-news .news .date { display: block; padding: 0 0 2px; font-size: 0.72rem; color: var(--accent); }
 .photo {
     position: relative;
     width: 200px;
@@ -432,6 +452,7 @@ footer p { margin: 0; color: var(--text-3); }
 
     .layout { grid-template-columns: 1fr; gap: 36px; padding-top: 32px; }
     .profile { order: 0; }
+    .side-news { grid-column: 1 / -1; }
     .profile-inner {
         position: static;
         display: grid;
