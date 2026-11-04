@@ -150,7 +150,7 @@
         </div>
         <div class="counter" style="--c: var(--magenta)">
             <span class="c-label">isa.target</span>
-            <span class="c-val">RISC-V</span>
+            <span class="c-val c-val-sm">Custom RISC&#8209;V<br>Vector ISA</span>
             <span class="c-sub">many-core VLIW + systolic</span>
             <span class="bar"><i style="--w: 92%"></i></span>
         </div>
@@ -188,7 +188,7 @@
                     <div class="code-bar"><i></i><i></i><i></i><span>suyash.sv</span></div>
 <pre><code><span class="k">module</span> <span class="f">suyash</span> #(
   <span class="k">parameter</span> FOCUS = <span class="s">"GEMM"</span>,
-  <span class="k">parameter</span> ISA   = <span class="s">"RISC-V"</span>
+  <span class="k">parameter</span> ISA   = <span class="s">"custom RISC-V vector"</span>
 ) (
   <span class="k">input</span>  <span class="t">logic</span> clk, ideas,
   <span class="k">output</span> <span class="t">logic</span> fast_hw, papers
@@ -229,7 +229,7 @@
                 <div class="project-body">
                     <span class="tag">architecture · compiler</span>
                     <h3>RISCA</h3>
-                    <p class="sub">Configurable many-core VLIW RISC-V accelerator</p>
+                    <p class="sub">Configurable many-core VLIW accelerator on a custom RISC-V vector ISA</p>
                     <p>
                         Throughput-oriented accelerator for AI and GEMM that couples vector processing with a 2D systolic
                         interconnect. I co-designed the processor array, distributed scratchpads, streaming datapaths, and

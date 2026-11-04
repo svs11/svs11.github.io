@@ -466,6 +466,7 @@ nav a.active { color: var(--cyan); background: color-mix(in srgb, var(--cyan) 12
     text-shadow: 0 0 22px color-mix(in srgb, var(--c) 50%, transparent);
     letter-spacing: -0.02em;
 }
+.c-val-sm { font-size: 1.25rem; line-height: 1.25; padding: 4px 0; }
 .c-sub { font-size: 0.82rem; color: var(--text-muted); }
 .bar {
     margin-top: 10px;
