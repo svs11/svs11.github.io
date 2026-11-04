@@ -1,7 +1,7 @@
 /* =========================================================
    Academic homepage — restrained, serif, one accent color.
    Subtle hardware touches: chip mark, trace-style rules with
-   via pads, line-art schematics, mono dates, faint circuit texture.
+   via pads, line-art schematics, mono dates, pinned venue badges.
    ========================================================= */
 :root {
     --bg: #fbfaf7;
@@ -152,18 +152,6 @@ nav a.active { color: var(--accent); }
     position: relative;
     width: 200px;
     margin-bottom: 22px;
-}
-/* faint circuit texture peeking out behind the photo */
-.photo::before {
-    content: "";
-    position: absolute;
-    inset: -22px -40px -22px -22px;
-    background-image: var(--circuit);
-    background-size: 220px;
-    opacity: 0.22;
-    z-index: -1;
-    -webkit-mask-image: radial-gradient(circle at 60% 50%, #000 35%, transparent 75%);
-    mask-image: radial-gradient(circle at 60% 50%, #000 35%, transparent 75%);
 }
 .photo img {
     display: block;
@@ -392,7 +380,7 @@ figcaption {
 .entry-head .date { padding: 0; text-align: right; }
 .org { margin: 2px 0 6px !important; font-family: var(--sans); font-size: 0.88rem; color: var(--text-3) !important; }
 .detail { font-size: 0.96rem; color: var(--text-2) !important; }
-.entries ul { margin: 6px 0 0; padding-left: 20px; }
+.entries ul { margin: 6px 0 0; padding-left: 20px; list-style: disc; }
 .entries ul li { font-size: 0.97rem; color: var(--text-2); margin-bottom: 4px; }
 .entries ul li::marker { color: var(--accent); }
 
