@@ -142,10 +142,10 @@ nav a.active { color: var(--accent); }
     margin: 0 auto;
     padding: 48px 28px 0;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 270px;
+    grid-template-columns: 270px minmax(0, 1fr);
     gap: 64px;
 }
-.profile { order: 2; }
+.profile { order: 0; }
 
 /* ============ Profile sidebar ============ */
 .profile-inner { position: static; }
