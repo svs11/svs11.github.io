@@ -306,6 +306,36 @@ main em { color: var(--text); }
 .project p { font-size: 0.98rem; color: var(--text-2); }
 .kw { font-size: 0.8rem !important; color: var(--text-3) !important; margin: 0 !important; }
 
+/* RISCA tool-flow strip */
+.flow {
+    list-style: none;
+    margin: 4px 0 16px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 0.74rem;
+}
+.flow li {
+    position: relative;
+    padding: 3px 10px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+.flow li + li { margin-left: 18px; }
+.flow li + li::before {
+    content: "→";
+    position: absolute;
+    left: -19px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-2);
+}
+
 .schematic { margin: 0; }
 .schematic svg {
     display: block;

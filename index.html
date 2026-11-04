@@ -108,9 +108,10 @@
             <p>
                 My dissertation, <em>Micro-Architecture and Compiler Co-Optimization for Maximizing the Efficiency for
                 Throughput-Oriented Workloads</em>, studies how processor organization, on-chip data movement, and
-                compiler scheduling can be designed together. Central to this work is <strong>RISCA</strong>, a
-                configurable many-core VLIW accelerator built on a custom RISC-V vector ISA with a two-dimensional systolic
-                interconnect, along with a custom LLVM backend. I have also developed <strong>N-TORC</strong>, an
+                compiler scheduling can be designed together. Central to this work is <strong>RISCA</strong>
+                (RISC-V INT8 Scalable Compute Array), a compiler-driven INT8 GEMM accelerator generator: given a network
+                and a real-time requirement, it sizes the hardware with a MILP, generates the RTL and kernels, and runs the
+                resulting design on an FPGA with bit-exact outputs. I have also developed <strong>N-TORC</strong>, an
                 ML-driven design-space exploration and resource-scheduling framework for FPGA-based real-time AI.
             </p>
             <p>
@@ -135,7 +136,7 @@
 
             <article class="project">
                 <figure class="schematic">
-                    <svg viewBox="0 0 180 130" width="180" height="130" role="img" aria-label="Diagram of a 3 by 3 systolic array of processing elements">
+                    <svg viewBox="0 0 180 130" width="180" height="130" role="img" aria-label="Diagram of a 3 by 3 broadcast array of outer-product processing elements">
                         <defs><marker id="arr" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L6 3L0 6z" class="arrowhead"/></marker></defs>
                         <g class="wire">
                             <path d="M40 40H150M40 75H150M40 110H150" />
@@ -158,18 +159,26 @@
                             <text x="14" y="34" class="io">A</text><text x="152" y="10" class="io">B</text>
                         </g>
                     </svg>
-                    <figcaption>2D systolic array of VLIW PEs</figcaption>
+                    <figcaption>outer-product PE array</figcaption>
                 </figure>
                 <div>
-                    <h3>RISCA: A Configurable Many-Core VLIW Accelerator</h3>
+                    <h3>RISCA: RISC-V INT8 Scalable Compute Array</h3>
                     <p>
-                        A throughput-oriented accelerator for AI and GEMM workloads built on a custom RISC-V vector ISA, combining
-                        vector processing with a two-dimensional systolic interconnect. The design co-optimizes the processor
-                        array, distributed scratchpads, streaming datapaths, and a double-buffered memory hierarchy with a custom
-                        LLVM backend supporting instruction scheduling, VLIW packetization, software pipelining, hazard management,
-                        and communication-aware kernel execution. Evaluated through RTL prototypes and cycle-level simulation.
+                        A compiler-driven INT8 GEMM accelerator generator for the AMD/Xilinx Zynq UltraScale+ ZCU104. RISCA is
+                        not one fixed accelerator: given a network and a real-time requirement (e.g., YOLOv8n at 30 FPS),
+                        the flow chooses the array shape, processing-element tile, memory ports, pad memories, and clocks that
+                        meet the deadline at the lowest measured power. It then generates the RTL and kernels for exactly that
+                        design, builds the bitstream, and runs it on the board with bit-exact outputs.
                     </p>
-                    <p class="kw">SystemVerilog · LLVM · RISC-V · cycle-level simulation · FPGA</p>
+                    <ol class="flow" aria-label="RISCA tool flow">
+                        <li>ONNX</li><li>TVM</li><li>MILP</li><li>RTL</li><li>Board</li>
+                    </ol>
+                    <p>
+                        The stack spans an outer-product processing element and its custom RISC-V vector ISA, a broadcast array
+                        and its memory system, an LLVM kernel compiler, a TVM front end, analytical models and the MILP that
+                        sizes the hardware, the board runtime, and a power-measurement protocol.
+                    </p>
+                    <p class="kw">SystemVerilog · LLVM · TVM · ONNX · MILP · INT8 · ZCU104 · with J. D. Bakos, HeRC Group</p>
                 </div>
             </article>
 
@@ -294,8 +303,9 @@
                     </div>
                     <p class="org">University of South Carolina, Columbia, SC · <a href="https://www.cse.sc.edu/~jbakos/index.html" target="_blank" rel="noopener">HeRC Group</a></p>
                     <ul>
-                        <li>Architected RISCA, a configurable many-core VLIW accelerator on a custom RISC-V vector ISA with a 2D systolic interconnect for scalable AI and GEMM workloads.</li>
-                        <li>Developed a custom LLVM backend for instruction scheduling, VLIW packetization, software pipelining, hazard management, and communication-aware kernel execution.</li>
+                        <li>Architected RISCA (RISC-V INT8 Scalable Compute Array), a compiler-driven INT8 GEMM accelerator generator for the ZCU104 that selects the array shape, PE tile, memory ports, and clocks meeting a real-time deadline at the lowest measured power.</li>
+                        <li>Built the end-to-end ONNX → TVM → MILP → RTL → board flow, including the TVM front end, analytical models, and a MILP that sizes the hardware.</li>
+                        <li>Developed a custom LLVM kernel compiler for instruction scheduling, VLIW packetization, software pipelining, hazard management, and communication-aware kernel execution.</li>
                         <li>Built RTL prototypes and cycle-level simulation workflows to evaluate latency, throughput, memory bandwidth, FPGA utilization, clock frequency, and scalability.</li>
                         <li>Developed N-TORC, an ML-driven design-space exploration and resource-scheduling framework for FPGA-based real-time AI.</li>
                         <li>Investigated compute, communication, and memory-bandwidth bottlenecks, including tiled data movement, streaming execution, workload mapping, and synchronization.</li>
