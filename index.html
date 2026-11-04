@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261104">
     <script>
         try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
     </script>
@@ -54,10 +54,10 @@
     <aside class="profile">
         <div class="profile-inner">
             <div class="photo">
-                <img src="assets/profile.jpg" alt="Portrait of Suyash Vardhan Singh" width="640" height="640">
+                <img src="assets/profile.jpg?v=20261104" alt="Portrait of Suyash Vardhan Singh" width="640" height="640">
             </div>
             <h1>Suyash Vardhan Singh</h1>
-            <p class="role">Ph.D. Candidate<br>Computer Engineering<br>University of South Carolina<br><a href="https://www.cse.sc.edu/~jbakos/index.html" target="_blank" rel="noopener">Bakos Research Group</a></p>
+            <p class="role">Ph.D. Candidate<br>Computer Engineering<br>University of South Carolina<br><a href="https://www.cse.sc.edu/~jbakos/index.html" target="_blank" rel="noopener">HeRC Group</a></p>
 
             <ul class="links">
                 <li><a href="mailto:suyashvardhans@gmail.com">
@@ -89,7 +89,7 @@
             <h2>About</h2>
             <p>
                 I am a Ph.D. candidate in Computer Engineering at the University of South Carolina, where I work in
-                <a href="https://www.cse.sc.edu/~jbakos/index.html" target="_blank" rel="noopener">Prof. Jason D. Bakos's research group</a>. I am expected to graduate
+                the <a href="https://www.cse.sc.edu/~jbakos/index.html" target="_blank" rel="noopener">HeRC Group</a> led by Prof. Jason D. Bakos. I am expected to graduate
                 in December 2026. My research is in <strong>computer architecture</strong>, with a focus on
                 <strong>micro-architecture and compiler co-optimization</strong> for throughput-oriented workloads such as
                 dense linear algebra (GEMM) and real-time machine learning.
@@ -135,20 +135,31 @@
             <h2>Research</h2>
 
             <article class="project">
-                <figure class="schematic" aria-hidden="true">
-                    <svg viewBox="0 0 160 110">
+                <figure class="schematic">
+                    <svg viewBox="0 0 180 130" width="180" height="130" role="img" aria-label="Diagram of a 3 by 3 systolic array of processing elements">
+                        <defs><marker id="arr" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L6 3L0 6z" class="arrowhead"/></marker></defs>
                         <g class="wire">
-                            <path d="M8 25H152M8 55H152M8 85H152"/>
-                            <path d="M35 8V102M80 8V102M125 8V102"/>
+                            <path d="M40 40H150M40 75H150M40 110H150" />
+                            <path d="M65 22V125M100 22V125M135 22V125" />
+                        </g>
+                        <g class="flow">
+                            <path d="M8 40H38" marker-end="url(#arr)"/><path d="M8 75H38" marker-end="url(#arr)"/><path d="M8 110H38" marker-end="url(#arr)"/>
+                            <path d="M65 4V20" marker-end="url(#arr)"/><path d="M100 4V20" marker-end="url(#arr)"/><path d="M135 4V20" marker-end="url(#arr)"/>
                         </g>
                         <g class="pe">
-                            <rect x="23" y="13" width="24" height="24" rx="2"/><rect x="68" y="13" width="24" height="24" rx="2"/><rect x="113" y="13" width="24" height="24" rx="2"/>
-                            <rect x="23" y="43" width="24" height="24" rx="2"/><rect x="68" y="43" width="24" height="24" rx="2"/><rect x="113" y="43" width="24" height="24" rx="2"/>
-                            <rect x="23" y="73" width="24" height="24" rx="2"/><rect x="68" y="73" width="24" height="24" rx="2"/><rect x="113" y="73" width="24" height="24" rx="2"/>
+                            <rect x="52" y="27" width="26" height="26" rx="3"/><rect x="87" y="27" width="26" height="26" rx="3"/><rect x="122" y="27" width="26" height="26" rx="3"/>
+                            <rect x="52" y="62" width="26" height="26" rx="3"/><rect x="87" y="62" width="26" height="26" rx="3"/><rect x="122" y="62" width="26" height="26" rx="3"/>
+                            <rect x="52" y="97" width="26" height="26" rx="3"/><rect x="87" y="97" width="26" height="26" rx="3"/><rect x="122" y="97" width="26" height="26" rx="3"/>
                         </g>
-                        <g class="accent-fill"><rect x="23" y="13" width="24" height="24" rx="2"/></g>
+                        <g class="pe-on"><rect x="52" y="27" width="26" height="26" rx="3"/><rect x="87" y="62" width="26" height="26" rx="3"/><rect x="122" y="97" width="26" height="26" rx="3"/></g>
+                        <g class="lbl">
+                            <text x="65" y="44">PE</text><text x="100" y="44">PE</text><text x="135" y="44">PE</text>
+                            <text x="65" y="79">PE</text><text x="100" y="79">PE</text><text x="135" y="79">PE</text>
+                            <text x="65" y="114">PE</text><text x="100" y="114">PE</text><text x="135" y="114">PE</text>
+                            <text x="14" y="34" class="io">A</text><text x="152" y="10" class="io">B</text>
+                        </g>
                     </svg>
-                    <figcaption>2D systolic PE array</figcaption>
+                    <figcaption>2D systolic array of VLIW PEs</figcaption>
                 </figure>
                 <div>
                     <h3>RISCA: A Configurable Many-Core VLIW Accelerator</h3>
@@ -164,15 +175,21 @@
             </article>
 
             <article class="project">
-                <figure class="schematic" aria-hidden="true">
-                    <svg viewBox="0 0 160 110">
-                        <g class="wire"><path d="M18 96H150M18 96V10"/></g>
+                <figure class="schematic">
+                    <svg viewBox="0 0 180 130" width="180" height="130" role="img" aria-label="Bar chart of predicted latency per configuration against a deadline">
+                        <g class="wire"><path d="M26 108H170M26 108V10"/></g>
+                        <path class="deadline" d="M26 36H170"/>
                         <g class="bar">
-                            <rect x="28" y="60" width="12" height="36"/><rect x="46" y="44" width="12" height="52"/>
-                            <rect x="64" y="66" width="12" height="30"/><rect x="82" y="36" width="12" height="60"/>
-                            <rect x="100" y="52" width="12" height="44"/><rect x="118" y="70" width="12" height="26"/>
+                            <rect x="34" y="70" width="14" height="38"/><rect x="56" y="50" width="14" height="58"/>
+                            <rect x="78" y="78" width="14" height="30"/><rect x="100" y="24" width="14" height="84"/>
+                            <rect x="122" y="60" width="14" height="48"/><rect x="144" y="84" width="14" height="24"/>
                         </g>
-                        <path class="accent-line" d="M18 30H150"/>
+                        <g class="bar-best"><rect x="78" y="78" width="14" height="30"/></g>
+                        <g class="lbl">
+                            <text x="166" y="30" class="dl">deadline</text>
+                            <text x="98" y="124">design configurations</text>
+                            <text x="12" y="60" transform="rotate(-90 12 60)">latency</text>
+                        </g>
                     </svg>
                     <figcaption>predicted latency vs. deadline</figcaption>
                 </figure>
@@ -189,18 +206,24 @@
             </article>
 
             <article class="project">
-                <figure class="schematic" aria-hidden="true">
-                    <svg viewBox="0 0 160 110">
+                <figure class="schematic">
+                    <svg viewBox="0 0 180 130" width="180" height="130" role="img" aria-label="Diagram of a memristive crossbar array">
                         <g class="wire">
-                            <path d="M14 20H146M14 42H146M14 64H146M14 86H146"/>
-                            <path d="M30 8V100M58 8V100M86 8V100M114 8V100M136 8V100"/>
+                            <path d="M30 24H164M30 50H164M30 76H164M30 102H164"/>
+                            <path d="M50 12V116M80 12V116M110 12V116M140 12V116"/>
                         </g>
                         <g class="node">
-                            <circle cx="30" cy="20" r="3"/><circle cx="58" cy="42" r="3"/><circle cx="86" cy="64" r="3"/><circle cx="114" cy="86" r="3"/>
-                            <circle cx="86" cy="20" r="3"/><circle cx="136" cy="42" r="3"/><circle cx="30" cy="64" r="3"/><circle cx="58" cy="86" r="3"/>
+                            <circle cx="50" cy="24" r="4"/><circle cx="80" cy="24" r="4"/><circle cx="110" cy="24" r="4"/><circle cx="140" cy="24" r="4"/>
+                            <circle cx="50" cy="50" r="4"/><circle cx="80" cy="50" r="4"/><circle cx="110" cy="50" r="4"/><circle cx="140" cy="50" r="4"/>
+                            <circle cx="50" cy="76" r="4"/><circle cx="80" cy="76" r="4"/><circle cx="110" cy="76" r="4"/><circle cx="140" cy="76" r="4"/>
+                            <circle cx="50" cy="102" r="4"/><circle cx="80" cy="102" r="4"/><circle cx="110" cy="102" r="4"/><circle cx="140" cy="102" r="4"/>
+                        </g>
+                        <g class="lbl">
+                            <text x="16" y="27">V₁</text><text x="16" y="53">V₂</text><text x="16" y="79">V₃</text><text x="16" y="105">V₄</text>
+                            <text x="50" y="126">I₁</text><text x="80" y="126">I₂</text><text x="110" y="126">I₃</text><text x="140" y="126">I₄</text>
                         </g>
                     </svg>
-                    <figcaption>memristive crossbar</figcaption>
+                    <figcaption>memristive crossbar (V in, I out)</figcaption>
                 </figure>
                 <div>
                     <h3>Decomposition-Based Memristive Crossbar Solver</h3>
@@ -270,7 +293,7 @@
                         <h3>Research Assistant / Teaching Assistant</h3>
                         <span class="date">Jan 2022 – Present</span>
                     </div>
-                    <p class="org">University of South Carolina, Columbia, SC · <a href="https://www.cse.sc.edu/~jbakos/index.html" target="_blank" rel="noopener">Bakos Research Group</a></p>
+                    <p class="org">University of South Carolina, Columbia, SC · <a href="https://www.cse.sc.edu/~jbakos/index.html" target="_blank" rel="noopener">HeRC Group</a></p>
                     <ul>
                         <li>Architected RISCA, a configurable many-core VLIW accelerator on a custom RISC-V vector ISA with a 2D systolic interconnect for scalable AI and GEMM workloads.</li>
                         <li>Developed a custom LLVM backend for instruction scheduling, VLIW packetization, software pipelining, hazard management, and communication-aware kernel execution.</li>
